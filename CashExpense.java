@@ -1,8 +1,8 @@
-public class CashExpense {
+public class CashExpense implements Expense {
   private String description;
   private double amount;
 
-  public CashExpense implements Expense {
+  public CashExpense(String description, double amount) {
     this.description = description;
     this.amount = amount;
   }

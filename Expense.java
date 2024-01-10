@@ -1,2 +1,4 @@
-public class Expense {
+public interface Expense {
+    String getDescription();
+    double getAmount();
 }

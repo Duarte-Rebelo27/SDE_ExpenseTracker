@@ -1,4 +1,4 @@
-public class CreditCardExpense {
+public class CreditCardExpense implements Expense {
   private String description;
   private double amount;
 

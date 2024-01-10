@@ -5,7 +5,7 @@ public class ExpenseTrackerFacade {
     this.expenseManager = new ExpenseManager();
   }
 
-  public void addCreditCardExpense(String cardNumber, ExpenseType expenseType, double amount) {
+  public void addCreditCardExpense(String description, double amount) {
     ExpenseFactory expenseFactory = new CreditCardExpenseFactory();
     Expense expense = expenseFactory.createExpense(description, amount);
     expenseManager.addExpense(expense);

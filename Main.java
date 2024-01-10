@@ -3,6 +3,10 @@ public class Main {
         ExpenseTrackerFacade expenseTrackerFacade = new ExpenseTrackerFacade();
         ExpenseManager expenseManager = new ExpenseManager();
         BudgetAlertSystem budgetAlertSystem = new BudgetAlertSystem();
+        ExpenseBuilder expenseBuilder = new BasicExpenseBuilder();
+        ExpenseDirector expenseDirector = new ExpenseDirector(expenseBuilder);
+
+        Expense expense = expenseDirector.constructCashExpense("Coffee", 2.75);
 
         expenseManager.addObserver(budgetAlertSystem);
         budgetAlertSystem.update(new CashExpense("Newspaper", 12.99));

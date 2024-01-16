@@ -1,5 +1,7 @@
 package src;
 
+import src.facadePattern.ExpenseTrackerFacade;
+
 public class Main {
     public static void main(String[] args) {
         ExpenseTrackerFacade expenseTrackerFacade = new ExpenseTrackerFacade();

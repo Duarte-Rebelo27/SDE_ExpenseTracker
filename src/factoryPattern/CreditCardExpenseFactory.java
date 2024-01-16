@@ -1,4 +1,7 @@
-package src;
+package src.factoryPattern;
+
+import src.CreditCardExpense;
+import src.Expense;
 
 public class CreditCardExpenseFactory implements ExpenseFactory {
     @Override

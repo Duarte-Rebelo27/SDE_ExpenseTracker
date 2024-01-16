@@ -1,5 +1,7 @@
 package src;
 
+import src.decoratorPattern.CurrencyConverterDecorator;
+import src.decoratorPattern.ReceiptScanDecorator;
 import src.facadePattern.ExpenseTrackerFacade;
 import src.observerPattern.BudgetAlertSystem;
 import src.observerPattern.ExpenseManager;

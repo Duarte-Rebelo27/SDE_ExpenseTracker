@@ -1,5 +1,7 @@
 package src;
 
+import src.console.ConsoleReader;
+import src.console.ConsoleWriter;
 import src.facadePattern.ExpenseTrackerFacade;
 import src.observerPattern.ExpenseManager;
 import src.observerPattern.ExpenseObserver;

@@ -1,4 +1,4 @@
-package src;
+package src.console;
 
 import java.io.BufferedReader;
 import java.io.IOException;

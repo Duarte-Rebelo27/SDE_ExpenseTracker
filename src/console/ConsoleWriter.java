@@ -1,4 +1,4 @@
-package src;
+package src.console;
 
 public class ConsoleWriter {
     public void writeLine(String line) {

@@ -1,4 +1,4 @@
-package src;
+package src.expenses;
 
 public class CreditCardExpense implements Expense {
   private String description;

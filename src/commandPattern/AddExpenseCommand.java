@@ -1,6 +1,6 @@
 package src.commandPattern;
 
-import src.Expense;
+import src.expenses.Expense;
 import src.observerPattern.ExpenseManager;
 
 public class AddExpenseCommand {

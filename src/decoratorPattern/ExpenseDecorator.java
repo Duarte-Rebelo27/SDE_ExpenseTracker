@@ -1,6 +1,6 @@
 package src.decoratorPattern;
 
-import src.Expense;
+import src.expenses.Expense;
 
 public interface ExpenseDecorator extends Expense {
 }

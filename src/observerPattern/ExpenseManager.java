@@ -1,6 +1,6 @@
 package src.observerPattern;
 
-import src.Expense;
+import src.expenses.Expense;
 
 import java.util.ArrayList;
 import java.util.List;

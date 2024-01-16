@@ -1,6 +1,6 @@
 package src.facadePattern;
 
-import src.*;
+import src.expenses.Expense;
 import src.factoryPattern.CashExpenseFactory;
 import src.factoryPattern.CreditCardExpenseFactory;
 import src.factoryPattern.ExpenseFactory;

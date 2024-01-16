@@ -1,7 +1,6 @@
 package src.decoratorPattern;
 
-import src.Expense;
-import src.decoratorPattern.ExpenseDecorator;
+import src.expenses.Expense;
 
 public class CurrencyConverterDecorator implements ExpenseDecorator {
   private Expense expense;

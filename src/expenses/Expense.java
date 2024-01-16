@@ -1,4 +1,4 @@
-package src;
+package src.expenses;
 
 public interface Expense {
     String getDescription();

@@ -1,7 +1,7 @@
 package src.factoryPattern;
 
-import src.CashExpense;
-import src.Expense;
+import src.expenses.CashExpense;
+import src.expenses.Expense;
 
 public class CashExpenseFactory implements ExpenseFactory {
     @Override

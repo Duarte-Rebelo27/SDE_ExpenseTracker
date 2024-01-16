@@ -1,6 +1,6 @@
 package src.decoratorPattern;
 
-import src.Expense;
+import src.expenses.Expense;
 
 public class BasicExpense implements Expense {
   private String description;

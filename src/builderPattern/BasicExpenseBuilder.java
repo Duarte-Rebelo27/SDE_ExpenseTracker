@@ -1,9 +1,8 @@
 package src.builderPattern;
 
-import src.CashExpense;
-import src.CreditCardExpense;
-import src.Expense;
-import src.builderPattern.ExpenseBuilder;
+import src.expenses.CashExpense;
+import src.expenses.CreditCardExpense;
+import src.expenses.Expense;
 
 public class BasicExpenseBuilder implements ExpenseBuilder {
     private String description;

@@ -1,6 +1,6 @@
 package src.observerPattern;
 
-import src.Expense;
+import src.expenses.Expense;
 
 public interface ExpenseObserver {
     void update(Expense expense);

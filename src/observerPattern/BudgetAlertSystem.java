@@ -1,7 +1,6 @@
 package src.observerPattern;
 
-import src.Expense;
-import src.observerPattern.ExpenseObserver;
+import src.expenses.Expense;
 
 public class BudgetAlertSystem implements ExpenseObserver {
     @Override

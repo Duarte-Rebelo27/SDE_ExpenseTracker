@@ -1,9 +1,13 @@
-package src;
+package src.observerPattern;
+
+import src.Expense;
+import src.observerPattern.ExpenseObserver;
+import src.observerPattern.ExpenseSubject;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExpenseManager implements ExpenseSubject{
+public class ExpenseManager implements ExpenseSubject {
     private List<Expense> expenses = new ArrayList<>();
     private List<ExpenseObserver> observers = new ArrayList<>();
 

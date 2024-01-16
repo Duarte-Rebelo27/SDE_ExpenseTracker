@@ -1,5 +1,7 @@
 package src;
 
+import src.observerPattern.ExpenseManager;
+
 public class AddExpenseCommand {
   private ExpenseManager expenseManager;
   private Expense expense;

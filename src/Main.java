@@ -1,6 +1,8 @@
 package src;
 
 import src.facadePattern.ExpenseTrackerFacade;
+import src.observerPattern.BudgetAlertSystem;
+import src.observerPattern.ExpenseManager;
 
 public class Main {
     public static void main(String[] args) {

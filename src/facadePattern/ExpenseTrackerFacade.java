@@ -4,6 +4,7 @@ import src.*;
 import src.factoryPattern.CashExpenseFactory;
 import src.factoryPattern.CreditCardExpenseFactory;
 import src.factoryPattern.ExpenseFactory;
+import src.observerPattern.ExpenseManager;
 
 public class ExpenseTrackerFacade {
   private ExpenseManager expenseManager;

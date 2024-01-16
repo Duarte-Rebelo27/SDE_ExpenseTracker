@@ -1,5 +1,7 @@
 package src;
 
+import src.observerPattern.ExpenseManager;
+
 public class UndoExpenseCommand implements ExpenseCommand{
   private ExpenseManager expenseManager;
 

@@ -1,4 +1,4 @@
-package src;
+package src.observerPattern;
 
 public interface ExpenseSubject {
     void addObserver(ExpenseObserver observer);

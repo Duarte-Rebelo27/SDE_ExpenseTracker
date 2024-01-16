@@ -1,4 +1,7 @@
-package src;
+package src.builderPattern;
+
+import src.Expense;
+import src.builderPattern.ExpenseBuilder;
 
 public class ExpenseDirector {
     private ExpenseBuilder expenseBuilder;

@@ -1,5 +1,9 @@
 package src;
 
+import src.builderPattern.BasicExpenseBuilder;
+import src.builderPattern.ExpenseBuilder;
+import src.builderPattern.ExpenseDirector;
+import src.decoratorPattern.BasicExpense;
 import src.decoratorPattern.CurrencyConverterDecorator;
 import src.decoratorPattern.ReceiptScanDecorator;
 import src.facadePattern.ExpenseTrackerFacade;

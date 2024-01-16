@@ -1,4 +1,6 @@
-package src;
+package src.builderPattern;
+
+import src.Expense;
 
 public interface ExpenseBuilder {
     ExpenseBuilder setDescription(String description);

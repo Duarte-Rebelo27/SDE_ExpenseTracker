@@ -1,9 +1,11 @@
 package src;
 
 import src.facadePattern.ExpenseTrackerFacade;
-import src.factoryPattern.CreditCardExpenseFactory;
 import src.observerPattern.ExpenseManager;
 import src.observerPattern.ExpenseObserver;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,15 +13,17 @@ public class Main {
         ExpenseManager expenseManager = new ExpenseManager();
         ExpenseTrackerFacade facade = new ExpenseTrackerFacade();
 
-        // Create an observer
-        ExpenseObserver budgetAlertSystem = expense -> {
-            if (expense.getAmount() > 100) {
-                System.out.println("Budget alert: High expense detected!");
-            }
+        // Create an observer to log expenses
+        List<String> loggedExpenses = new ArrayList<>();
+        ExpenseObserver expenseLogger = expense -> {
+            String log = "Product: " + expense.getDescription() +
+                    ", Payment Method: " + expense.getAmount() +
+                    ", Amount: " + expense.getAmount();
+            loggedExpenses.add(log);
         };
 
         // Register the observer
-        expenseManager.addObserver(budgetAlertSystem);
+        expenseManager.addObserver(expenseLogger);
 
         // Use the facade to add an expense based on user input
         ConsoleReader reader = new ConsoleReader();
@@ -42,5 +46,9 @@ public class Main {
 
         // Use the facade to add an expense
         facade.addCashExpense(product, amount);
+
+        // Print the logged expenses
+        writer.writeLine("You just added one item to your expenses: ");
+        writer.writeLine(product + ", " + paymentMethod + ", " + amount + "€");
     }
 }

@@ -1,40 +1,37 @@
 package src.observerPattern;
 
 import src.Expense;
-import src.observerPattern.ExpenseObserver;
-import src.observerPattern.ExpenseSubject;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExpenseManager implements ExpenseSubject {
-    private List<Expense> expenses = new ArrayList<>();
+public class ExpenseManager {
     private List<ExpenseObserver> observers = new ArrayList<>();
+    private List<Expense> expenses = new ArrayList<>(); // Assuming you have a list of expenses
 
-    @Override
     public void addObserver(ExpenseObserver observer) {
         observers.add(observer);
     }
 
-    @Override
     public void removeObserver(ExpenseObserver observer) {
         observers.remove(observer);
     }
 
-    @Override
     public void notifyObservers() {
-        for (ExpenseObserver observer : observers) {
-            observer.update(expenses.get(expenses.size() - 1));
+        if (!expenses.isEmpty()) {
+            for (ExpenseObserver observer : observers) {
+                observer.update(expenses.get(expenses.size() - 1));
+            }
         }
     }
 
+    // Assuming you have a method to add expenses
     public void addExpense(Expense expense) {
         expenses.add(expense);
-        System.out.println("Added expense: " + expense.getDescription());
     }
-    public void removeExpense(Expense expense) {
-        expenses.remove(expense);
-        notifyObservers();
-        System.out.println("Removed expense: " + expense.getDescription());
+
+    // Assuming you have a method to get all expenses
+    public List<Expense> getAllExpenses() {
+        return new ArrayList<>(expenses);
     }
 }

@@ -19,9 +19,10 @@ public class ExpenseTrackerFacade {
     expenseManager.addExpense(expense);
   }
 
-  public void addCashExpense(String description, double amount) {
+  public Expense addCashExpense(String description, double amount) {
     ExpenseFactory expenseFactory = new CashExpenseFactory();
     Expense expense = expenseFactory.createExpense(description, amount);
     expenseManager.addExpense(expense);
+    return expense;
   }
 }

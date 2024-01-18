@@ -3,6 +3,7 @@ package src;
 import src.console.ConsoleReader;
 import src.console.ConsoleWriter;
 import src.facadePattern.ExpenseTrackerFacade;
+import src.observerPattern.BudgetAlertSystem;
 import src.observerPattern.ExpenseManager;
 import src.observerPattern.ExpenseObserver;
 
@@ -51,6 +52,12 @@ public class Main {
 
         // Print the logged expenses
         writer.writeLine("You just added one item to your expenses: ");
-        writer.writeLine(product + ", " + paymentMethod + ", " + amount + "€");
+        writer.writeLine(product + ", " + amount + "€");
+        writer.writeLine("You payed with " + paymentMethod);
+
+        if (amount > 100) {
+            BudgetAlertSystem budgetAlertSystem = new BudgetAlertSystem();
+            budgetAlertSystem.update(facade.addCashExpense(product, amount));
+        }
     }
 }
